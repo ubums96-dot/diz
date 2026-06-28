@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gg sans', 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: transparent;
+    color: #dbdee1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.background {
+    position: fixed;
+    inset: 0;
+    background-image: url("https://i.postimg.cc/6pw5V790/new-and-slightly-older-discord-login-screen-as-a-png-v0-nnd20frfve3d1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+.background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.auth-card {
+    background-color: #313338; /* Container backdrop */
+    width: 100%;
+    max-width: 480px;
+    border-radius: 8px;
+    padding: 32px 32px 24px 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Header Avatar Elements */
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #2b2d31;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.app-avatar {
+    background-color: #5865f2;
+}
+
+.avatar-connector {
+    color: #4e5058;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0 20px;
+    letter-spacing: 2px;
+}
+/* Typography styles */
+.app-title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bot-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 3px 10px;
+    border-radius: 999px;
+
+    background: linear-gradient(180deg, #6f7cff 0%, #5360e5 100%);
+    border: 1px solid rgba(255,255,255,.08);
+
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.15),
+        0 2px 6px rgba(0,0,0,.25);
+}
+
+.badge-check {
+    width: 15px;
+    height: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(255,255,255,.22);
+
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.app-subtitle {
+    font-size: 1rem;
+    color: #b5bac1;
+    margin-bottom: 4px;
+}
+
+.user-switch {
+    font-size: 0.85rem;
+    color: #949ba4;
+    margin-bottom: 24px;
+}
+
+.user-switch a {
+    color: #00a8fc;
+    text-decoration: none;
+}
+
+.user-switch a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #3f4147;
+    margin-bottom: 24px;
+}
+
+.section-title {
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #949ba4;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+/* App Capabilities Items UI */
+.permission-list {
+    text-align: left;
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+.permission-list li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.permission-list .allowed { color: #dbdee1; }
+.permission-list .disallowed { color: #949ba4; }
+
+.status-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.status-icon.success {
+    background-color: rgba(35, 165, 90, 0.15);
+    color: #23a55a;
+}
+
+.status-icon.fail {
+    background-color: rgba(242, 63, 66, 0.15);
+    color: #f23f42;
+}
+
+/* Info Banner Box Component */
+.install-info-box {
+    background-color: #2b2d31;
+    border: 1px solid #3f4147;
+    border-radius: 4px;
+    padding: 12px 16px;
+    display: flex;
+    gap: 12px;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.info-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    color: #f0b232; /* Warm amber */
+}
+
+.install-info-box p {
+    font-size: 0.85rem;
+    color: #b5bac1;
+    line-height: 1.4;
+}
+
+.install-info-box strong {
+    color: #dbdee1;
+}
+
+/* Fixed Bottom Interactive Bar */
+.auth-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b2d31;
+    margin: 0 -32px -24px -32px;
+    padding: 16px 32px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+button {
+    padding: 10px 28px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.btn-cancel {
+    background: transparent;
+    color: #ffffff;
+}
+
+.btn-cancel:hover {
+    text-decoration: underline;
+}
+
+.btn-authorize {
+    background-color: #5865f2; /* Blurple CTA */
+    color: #ffffff;
+}
+
+.btn-authorize:hover {
+    background-color: #4752c4;
+}
+.agreement {
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    gap: 12px;
+    user-select: none;
+}
+
+.checkbox-container input {
+    display: none;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid #5b5d67;
+    background: #1e1f22;
+    flex-shrink: 0;
+    transition: all .2s ease;
+    margin-top: 2px;
+    position: relative;
+}
+
+.checkbox-container input:checked + .checkmark {
+    background: #5865f2;
+    border-color: #5865f2;
+}
+
+.checkbox-container input:checked + .checkmark::after {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+}
+
+.agreement-text {
+    color: #b5bac1;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.btn-authorize:disabled {
+    background: #4e5058;
+    color: #8e9297;
+    cursor: not-allowed;
+    opacity: .7;
+}
+
+.btn-authorize:disabled:hover {
+    background: #4e5058;
+}
+
+/* Small-screen adjustments */
+@media (max-width: 420px) {
+    .auth-card {
+        padding: 20px 18px 16px 18px;
+        border-radius: 0;
+        width: 100vw;
+        max-width: none;
+        height: 100vh;
+        margin: 0;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .avatar-container { gap: 10px; }
+
+    .avatar { width: 56px; height: 56px; }
+
+    .app-title { font-size: 1.125rem; }
+
+    .permission-list li { font-size: 0.9rem; }
+
+    .auth-footer { padding: 12px 18px; margin: 0 -18px -16px -18px; }
+
+    .help-links { flex-direction: column; gap: 8px; }
+}

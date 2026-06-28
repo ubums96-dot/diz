@@ -1,0 +1,91 @@
+Migrated from ips.txt on 6/27/2026, 8:44:37 PM
+
+Time: 6/27/2026, 8:38:49 PM
+
+IP: 127.0.0.1
+
+--------------------------------
+
+
+Time: 6/27/2026, 8:44:44 PM
+
+IP Address: 127.0.0.1
+Geographic Location: N/A
+Time Zone: America/Chicago
+User-Agent String: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0
+Hardware Specs: N/A
+Internal State: N/A
+Referrer header: http://localhost:8080/home.html
+Tracking cookies: N/A
+
+--------------------------------
+
+Time: 6/27/2026, 8:48:50 PM
+
+IP Address: 127.0.0.1
+Geographic Location: {"latitude":42.2608896,"longitude":-89.0863616,"accuracy":7080.021392702791}
+Time Zone: America/Chicago
+User-Agent String: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0
+Hardware Specs: {"cores":4,"deviceMemory":8,"platform":"Win32","screen":{"width":1366,"height":768},"language":"en-US"}
+Internal State: {"localStorage":{},"sessionStorage":{}}
+Referrer header: http://localhost:8080/home.html
+Tracking cookies: N/A
+
+--------------------------------
+
+Time: 6/27/2026, 8:55:56 PM
+
+IP Address: 127.0.0.1
+Geographic Location: {"latitude":42.2608896,"longitude":-89.0863616,"accuracy":7080.021392702791}
+Time Zone: America/Chicago
+User-Agent String: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0
+Hardware Specs: {"cores":4,"deviceMemory":8,"platform":"Win32","screen":{"width":1366,"height":768},"language":"en-US"}
+Internal State: {"localStorage":{},"sessionStorage":{}}
+Referrer header: http://localhost:8080/home.html
+Tracking cookies: N/A
+Cookie Header: N/A
+
+--------------------------------
+
+Time: 6/27/2026, 9:02:13 PM
+
+IP Address: 10.0.0.10
+Geographic Location: denied_or_unavailable
+Time Zone: America/Chicago
+User-Agent String: Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36
+Hardware Specs: {"cores":8,"deviceMemory":"N/A","platform":"Linux armv81","screen":{"width":412,"height":915},"language":"en-US"}
+Internal State: {"localStorage":{},"sessionStorage":{}}
+Referrer header: http://10.0.0.97:8080/home.html
+Tracking cookies: client_test=1
+Cookie Header: client_test=1
+
+--------------------------------
+
+Time: 6/27/2026, 9:59:19 PM
+
+IP Address: 127.0.0.1
+Geographic Location: {"latitude":42.2608896,"longitude":-89.0863616,"accuracy":7080.021392702791}
+Time Zone: America/Chicago
+User-Agent String: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0
+Hardware Specs: {"cores":4,"deviceMemory":8,"platform":"Win32","screen":{"width":1280,"height":720},"language":"en-US"}
+Internal State: {"localStorage":{},"sessionStorage":{}}
+Referrer header: http://localhost:8080/home.html
+Tracking cookies: client_test=1
+Cookie Header: client_test=1
+
+--------------------------------
+
+Time: 6/27/2026, 10:09:42 PM
+
+IP Address: 127.0.0.1
+Geographic Location: {"latitude":42.2608896,"longitude":-89.0863616,"accuracy":7080.021392702791}
+Time Zone: America/Chicago
+User-Agent String: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0
+Hardware Specs: {"cores":4,"deviceMemory":8,"platform":"Win32","screen":{"width":1280,"height":720},"language":"en-US"}
+Internal State: {"localStorage":{},"sessionStorage":{}}
+Referrer header: http://localhost:8080/home.html
+Tracking cookies: client_test=1
+Cookie Header: client_test=1
+
+--------------------------------
+

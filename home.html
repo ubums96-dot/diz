@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="C:\Users\ThinkPad\Downloads\images__1_-removebg-preview.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorize User App</title>
+    <link rel="stylesheet" href="stylehome.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="auth-card">
+        <!-- Header: Application Avatars Link -->
+        <div class="avatar-container">
+            <div class="avatar discord-logo">
+                <img src="https://i.postimg.cc/N0xy2WZy/031b544f6ede1839f27785d00396e1a5.png" alt="Discord">
+            </div>
+            <div class="avatar-connector">...</div>
+            <div class="avatar app-avatar">
+                <!-- Replace with your actual User App avatar image asset link -->
+                <img src="https://i.postimg.cc/Pxtw6tmh/8cc83edbbb7a6fa5b55ca9f955569a0a.png" alt="App Logo">
+            </div>
+        </div>
+
+        <!-- App Metadata -->
+       <h1 class="app-title">
+    heist
+    <span class="bot-badge">
+        <span class="badge-check">✓</span>
+        APP
+    </span>
+</h1>
+        <p class="app-subtitle">wants to install to your personal Discord account</p>
+        <p class="user-switch">Signed in as <strong>20191009nodoubt</strong> <a href="#">Not you?</a></p>
+
+        <hr class="divider">
+
+        <!-- Scopes / Permissions Context -->
+        <div class="section-title">THIS APP WILL BE ABLE TO:</div>
+        <ul class="permission-list">
+            <li class="allowed">
+                <span class="status-icon success">✔</span>
+                Be used by you anywhere in Discord (DMs, Group Chats, Servers)
+            </li>
+            <li class="allowed">
+                <span class="status-icon success">✔</span>
+                Access your public username, avatar, and banner
+            </li>
+            <li class="allowed">
+                <span class="status-icon success">✔</span>
+                Create and display application commands directly in your UI
+            </li>
+            <li class="disallowed">
+                <span class="status-icon fail">✖</span>
+                Solve a mystery with Scooby and the gang
+            </li>
+        </ul>
+
+        <!-- Account Confirmation Scope Info -->
+        <div class="install-info-box">
+            <svg class="info-icon" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10" fill="currentColor"/>
+    <rect x="11" y="10" width="2" height="7" rx="1" fill="#2b2d31"/>
+    <circle cx="12" cy="7" r="1.2" fill="#2b2d31"/>
+</svg>
+            <p>This app installs directly to your global profile. You can remove it at any time from your <strong>User Settings &gt; Authorized Apps</strong> menu.</p>
+        </div>
+
+        <!-- Footer Actions -->
+     <div class="agreement">
+        <label class="checkbox-container">
+            <input type="checkbox" id="acceptTerms">
+            <span class="checkmark"></span>
+            <span class="agreement-text">
+                I understand what this application will be able to access and I want to continue.
+        </span>
+    </label>
+</div>
+<div class="auth-footer">
+    <button class="btn-cancel">Cancel</button>
+    <button class="btn-authorize" id="authorizeBtn" disabled>
+        Authorize
+    </button>
+ </div>
+
+<script src="home.js"></script>
+</body>
+</html>

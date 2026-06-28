@@ -1,0 +1,287 @@
+Time: 6/27/2026, 8:48:50 PM
+
+IP: 127.0.0.1
+Headers: {"host":"localhost:8080","connection":"keep-alive","content-length":"1110","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0","sec-ch-ua":"\"Chromium\";v=\"148\", \"Opera GX\";v=\"132\", \"Not/A)Brand\";v=\"99\"","content-type":"application/json","sec-ch-ua-mobile":"?0","accept":"*/*","origin":"http://localhost:8080","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:8080/home.html","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9"}
+Diagnostics: {
+  "timestamp": "2026-06-28T01:48:50.443Z",
+  "geoAvailable": true,
+  "geoResult": {
+    "latitude": 42.2608896,
+    "longitude": -89.0863616,
+    "accuracy": 7080.021392702791
+  },
+  "timezone": "America/Chicago",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0",
+  "hardwareSpecsPresent": true,
+  "hardwareSpecs": {
+    "cores": 4,
+    "deviceMemory": 8,
+    "platform": "Win32",
+    "screen": {
+      "width": 1366,
+      "height": 768
+    },
+    "language": "en-US"
+  },
+  "localStorageAccessible": true,
+  "localStorageCount": 0,
+  "sessionStorageCount": 0,
+  "referrer": "http://localhost:8080/",
+  "cookiesPresent": true,
+  "rawPayloadPreview": {
+    "timezone": "America/Chicago",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0",
+    "hardwareSpecs": {
+      "cores": 4,
+      "deviceMemory": 8,
+      "platform": "Win32",
+      "screen": {
+        "width": 1366,
+        "height": 768
+      },
+      "language": "en-US"
+    },
+    "internalState": {
+      "localStorage": {},
+      "sessionStorage": {}
+    },
+    "referrer": "http://localhost:8080/",
+    "cookies": "N/A",
+    "geoLocation": {
+      "latitude": 42.2608896,
+      "longitude": -89.0863616,
+      "accuracy": 7080.021392702791
+    }
+  }
+}
+
+--------------------------------
+
+Time: 6/27/2026, 8:55:56 PM
+
+IP: 127.0.0.1
+Headers: {"host":"localhost:8080","connection":"keep-alive","content-length":"1110","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0","sec-ch-ua":"\"Chromium\";v=\"148\", \"Opera GX\";v=\"132\", \"Not/A)Brand\";v=\"99\"","content-type":"application/json","sec-ch-ua-mobile":"?0","accept":"*/*","origin":"http://localhost:8080","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:8080/home.html","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9"}
+Diagnostics: {
+  "timestamp": "2026-06-28T01:55:56.731Z",
+  "geoAvailable": true,
+  "geoResult": {
+    "latitude": 42.2608896,
+    "longitude": -89.0863616,
+    "accuracy": 7080.021392702791
+  },
+  "timezone": "America/Chicago",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0",
+  "hardwareSpecsPresent": true,
+  "hardwareSpecs": {
+    "cores": 4,
+    "deviceMemory": 8,
+    "platform": "Win32",
+    "screen": {
+      "width": 1366,
+      "height": 768
+    },
+    "language": "en-US"
+  },
+  "localStorageAccessible": true,
+  "localStorageCount": 0,
+  "sessionStorageCount": 0,
+  "referrer": "http://localhost:8080/",
+  "cookiesPresent": true,
+  "rawPayloadPreview": {
+    "timezone": "America/Chicago",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0",
+    "hardwareSpecs": {
+      "cores": 4,
+      "deviceMemory": 8,
+      "platform": "Win32",
+      "screen": {
+        "width": 1366,
+        "height": 768
+      },
+      "language": "en-US"
+    },
+    "internalState": {
+      "localStorage": {},
+      "sessionStorage": {}
+    },
+    "referrer": "http://localhost:8080/",
+    "cookies": "N/A",
+    "geoLocation": {
+      "latitude": 42.2608896,
+      "longitude": -89.0863616,
+      "accuracy": 7080.021392702791
+    }
+  }
+}
+
+--------------------------------
+
+Time: 6/27/2026, 9:02:13 PM
+
+IP: 10.0.0.10
+Headers: {"host":"10.0.0.97:8080","connection":"keep-alive","content-length":"1006","user-agent":"Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36","content-type":"application/json","accept":"*/*","origin":"http://10.0.0.97:8080","referer":"http://10.0.0.97:8080/home.html","accept-encoding":"gzip, deflate","accept-language":"en-US,en;q=0.9","cookie":"client_test=1"}
+Diagnostics: {
+  "timestamp": "2026-06-28T02:02:12.482Z",
+  "geoAvailable": true,
+  "geoResult": "denied_or_unavailable",
+  "timezone": "America/Chicago",
+  "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+  "hardwareSpecsPresent": true,
+  "hardwareSpecs": {
+    "cores": 8,
+    "deviceMemory": "N/A",
+    "platform": "Linux armv81",
+    "screen": {
+      "width": 412,
+      "height": 915
+    },
+    "language": "en-US"
+  },
+  "localStorageAccessible": true,
+  "localStorageCount": 0,
+  "sessionStorageCount": 0,
+  "referrer": "http://10.0.0.97:8080/",
+  "cookiesPresent": true,
+  "rawPayloadPreview": {
+    "timezone": "America/Chicago",
+    "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Mobile Safari/537.36",
+    "hardwareSpecs": {
+      "cores": 8,
+      "deviceMemory": "N/A",
+      "platform": "Linux armv81",
+      "screen": {
+        "width": 412,
+        "height": 915
+      },
+      "language": "en-US"
+    },
+    "internalState": {
+      "localStorage": {},
+      "sessionStorage": {}
+    },
+    "referrer": "http://10.0.0.97:8080/",
+    "cookies": "client_test=1",
+    "geoLocation": "denied_or_unavailable"
+  }
+}
+
+--------------------------------
+
+Time: 6/27/2026, 9:59:19 PM
+
+IP: 127.0.0.1
+Headers: {"host":"localhost:8080","connection":"keep-alive","content-length":"1120","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0","sec-ch-ua":"\"Chromium\";v=\"148\", \"Opera GX\";v=\"132\", \"Not/A)Brand\";v=\"99\"","content-type":"application/json","sec-ch-ua-mobile":"?0","accept":"*/*","origin":"http://localhost:8080","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:8080/home.html","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9","cookie":"client_test=1"}
+Diagnostics: {
+  "timestamp": "2026-06-28T02:59:19.199Z",
+  "geoAvailable": true,
+  "geoResult": {
+    "latitude": 42.2608896,
+    "longitude": -89.0863616,
+    "accuracy": 7080.021392702791
+  },
+  "timezone": "America/Chicago",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0",
+  "hardwareSpecsPresent": true,
+  "hardwareSpecs": {
+    "cores": 4,
+    "deviceMemory": 8,
+    "platform": "Win32",
+    "screen": {
+      "width": 1280,
+      "height": 720
+    },
+    "language": "en-US"
+  },
+  "localStorageAccessible": true,
+  "localStorageCount": 0,
+  "sessionStorageCount": 0,
+  "referrer": "http://localhost:8080/",
+  "cookiesPresent": true,
+  "rawPayloadPreview": {
+    "timezone": "America/Chicago",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0",
+    "hardwareSpecs": {
+      "cores": 4,
+      "deviceMemory": 8,
+      "platform": "Win32",
+      "screen": {
+        "width": 1280,
+        "height": 720
+      },
+      "language": "en-US"
+    },
+    "internalState": {
+      "localStorage": {},
+      "sessionStorage": {}
+    },
+    "referrer": "http://localhost:8080/",
+    "cookies": "client_test=1",
+    "geoLocation": {
+      "latitude": 42.2608896,
+      "longitude": -89.0863616,
+      "accuracy": 7080.021392702791
+    }
+  }
+}
+
+--------------------------------
+
+Time: 6/27/2026, 10:09:42 PM
+
+IP: 127.0.0.1
+Headers: {"host":"localhost:8080","connection":"keep-alive","content-length":"1120","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0","sec-ch-ua":"\"Chromium\";v=\"148\", \"Opera GX\";v=\"132\", \"Not/A)Brand\";v=\"99\"","content-type":"application/json","sec-ch-ua-mobile":"?0","accept":"*/*","origin":"http://localhost:8080","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:8080/home.html","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9","cookie":"client_test=1"}
+Diagnostics: {
+  "timestamp": "2026-06-28T03:09:42.229Z",
+  "geoAvailable": true,
+  "geoResult": {
+    "latitude": 42.2608896,
+    "longitude": -89.0863616,
+    "accuracy": 7080.021392702791
+  },
+  "timezone": "America/Chicago",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0",
+  "hardwareSpecsPresent": true,
+  "hardwareSpecs": {
+    "cores": 4,
+    "deviceMemory": 8,
+    "platform": "Win32",
+    "screen": {
+      "width": 1280,
+      "height": 720
+    },
+    "language": "en-US"
+  },
+  "localStorageAccessible": true,
+  "localStorageCount": 0,
+  "sessionStorageCount": 0,
+  "referrer": "http://localhost:8080/",
+  "cookiesPresent": true,
+  "rawPayloadPreview": {
+    "timezone": "America/Chicago",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 OPR/132.0.0.0",
+    "hardwareSpecs": {
+      "cores": 4,
+      "deviceMemory": 8,
+      "platform": "Win32",
+      "screen": {
+        "width": 1280,
+        "height": 720
+      },
+      "language": "en-US"
+    },
+    "internalState": {
+      "localStorage": {},
+      "sessionStorage": {}
+    },
+    "referrer": "http://localhost:8080/",
+    "cookies": "client_test=1",
+    "geoLocation": {
+      "latitude": 42.2608896,
+      "longitude": -89.0863616,
+      "accuracy": 7080.021392702791
+    }
+  }
+}
+
+--------------------------------
+

@@ -1,0 +1,12 @@
+services:
+  - type: web_service
+    name: dis-app
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    branch: main
+    envVars:
+      - key: NODE_ENV
+        value: production
