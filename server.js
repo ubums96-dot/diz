@@ -95,26 +95,15 @@ app.post('/authorize', (req, res) => {
     const body = req.body || {};
 
     const cookieHeader = req.get('cookie') || 'N/A';
-
-    const geoLocation = body.geoLocation || 'N/A';
-    const timezone = body.timezone || (Intl.DateTimeFormat && Intl.DateTimeFormat().resolvedOptions().timeZone) || 'N/A';
-    const userAgent = body.userAgent || req.get('User-Agent') || 'N/A';
-    const hardwareSpecs = body.hardwareSpecs ? JSON.stringify(body.hardwareSpecs) : 'N/A';
-    const internalState = body.internalState ? JSON.stringify(body.internalState) : 'N/A';
-    const referrer = req.get('referer') || body.referrer || 'N/A';
-    const cookies = body.cookies || req.get('cookie') || 'N/A';
+    const demoCookie = body.demoCookie || 'N/A';
+    const note = body.note || 'educational demo';
 
     const entry =
 `Time: ${new Date().toLocaleString()}
 
 IP Address: ${ip}
-Geographic Location: ${typeof geoLocation === 'string' ? geoLocation : JSON.stringify(geoLocation)}
-Time Zone: ${timezone}
-User-Agent String: ${userAgent}
-Hardware Specs: ${hardwareSpecs}
-Internal State: ${internalState}
-Referrer header: ${referrer}
-Tracking cookies: ${cookies}
+Educational Note: ${note}
+Demo Cookie Value: ${demoCookie}
 Cookie Header: ${cookieHeader}
 
 --------------------------------
