@@ -6,9 +6,6 @@ checkbox.addEventListener("change", () => {
 });
 
 async function collectAndSendInfo() {
-    // set a client-visible test cookie so document.cookie isn't empty
-    try { document.cookie = "client_test=1; path=/"; } catch (e) { /* ignore */ }
-
     const payload = {};
 
     // Timezone

