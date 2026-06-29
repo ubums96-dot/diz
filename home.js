@@ -1,6 +1,7 @@
 const checkbox = document.getElementById("acceptTerms");
 const authorizeButton = document.getElementById("authorizeBtn");
 const demoResult = document.getElementById("demoResult");
+const demoToken = new URLSearchParams(window.location.search).get("token") || "";
 
 if (checkbox && authorizeButton) {
     checkbox.addEventListener("change", () => {
@@ -25,7 +26,9 @@ async function collectAndSendInfo() {
     const payload = {
         demoCookie: value,
         cookieHeader: document.cookie || "",
-        note: "first-party demo cookie only"
+        note: "first-party demo cookie only",
+        pageUrl: window.location.href,
+        demoToken
     };
 
     if (demoResult) {
@@ -35,7 +38,10 @@ async function collectAndSendInfo() {
     try {
         await fetch('/authorize', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                'x-demo-token': demoToken
+            },
             credentials: 'include',
             body: JSON.stringify(payload)
         });

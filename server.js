@@ -5,9 +5,25 @@ const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+const DEMO_ACCESS_TOKEN = process.env.DEMO_ACCESS_TOKEN || 'self-demo-20260629';
+
+function isAuthorizedRequest(req) {
+    const token = req.query?.token || req.get('x-demo-token') || '';
+    const host = (req.hostname || '').toLowerCase();
+    const isLocalhost = host === 'localhost' || host === '127.0.0.1' || host === '::1' || host === '[::1]';
+    return isLocalhost || token === DEMO_ACCESS_TOKEN;
+}
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use((req, res, next) => {
+    const allowedPaths = ['/', '/home.html', '/index.html', '/loading.html', '/loading.js', '/loading.css', '/home.js', '/stylehome.css', '/style.css'];
+    if (allowedPaths.includes(req.path) && !isAuthorizedRequest(req)) {
+        return res.status(403).send('Access denied. Use the private demo link with the matching token.');
+    }
+    next();
+});
 
 // Serve the files in the public folder
 app.use(express.static(__dirname));
